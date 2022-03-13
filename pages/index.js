@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from 'react';
 
 
 import Head from 'next/head';
-
+import Header from '../components/header.component'
 
 export default function Home() {
   
@@ -43,7 +43,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         
       </Head>
-
+      
+      <Header />
       <main className="flex justify-center items-center min-h-screen bg-blue-200">
         <div className="bg-white p-4 rounded-lg shadow-lg">
         <h1 className="text-center p-2 text-3xl font-semibold uppercase text-black-600">
