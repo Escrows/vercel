@@ -17,6 +17,12 @@ export default function Home() {
     localStorage.setItem('previuslyWalletConnected', true)
   });
   
+  const update = useCallback(() => {
+     library?.eth.getBalance(account).then((result) => {
+      setBalance(result/1e18)
+    });
+  });
+  
   const updateBalance = async() => {
     await library?.eth.getBalance(account).then((result) => {
       setBalance(result/1e18)
@@ -29,7 +35,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    if(localStorage.getItem('previuslyWalletConnected') === "true") connect();
+    if(localStorage.getItem('previuslyWalletConnected') === "true") connect(), update();
   }, [])
   
 
@@ -51,9 +57,15 @@ export default function Home() {
           METAMASK WEB
         </h1>
             {!active || !account ? (
+              
+              <div>
               <button onClick={connect} className='block w-full p-4 border-b-4 border-red-700 rounded-lg bg-red-500 text-white font-semibold uppercase text-lg leafing-none px-4 py-2'>
-                Conectate con metamask
+                SIGN-UP METAMASK
               </button> 
+              <p className="text-bolder text-1xl ">
+                &copy; 2022 Nextjs+Metamask
+              </p>
+              </div>
             ): (
               <div>
                 <a href={`https://etherscan.io/address/${account}`} target="_blank" rel="nofollow noopener noreferrer" className='mt-2 block w-full text-center'> 
@@ -70,10 +82,10 @@ export default function Home() {
               
               </div>
               <button onClick={updateBalance} className="inline-block mt-10 ml-1 w-[45%] border-b-4 border-red-700 rounded-lg bg-red-500 text-white font-semibold uppercase text-lg  py-2">
-                Recargar
+                LOAD BALANCE
               </button>
               <button onClick={disconnect} className="mt-2 ml-9 w-[45%] border-b-4 border-red-700 rounded-lg bg-red-500 text-white font-semibold uppercase text-lg  py-2">
-                Desconectarse
+                LOGOUT
               </button>
               
                 </div>
