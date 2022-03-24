@@ -16,12 +16,6 @@ export default function Home() {
     localStorage.setItem("previuslyWalletConnected", true);
   });
 
-  const update = useCallback(() => {
-    library?.eth.getBalance(account).then((result) => {
-      setBalance(result / 1e18);
-    });
-  });
-
   const updateBalance = async () => {
     await library?.eth.getBalance(account).then((result) => {
       setBalance(result / 1e18);
