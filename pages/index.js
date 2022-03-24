@@ -29,7 +29,7 @@ export default function Home() {
 
   useEffect(() => {
     if (localStorage.getItem("previuslyWalletConnected") === "true")
-      connect(), update();
+      connect();
   }, []);
 
   useEffect(() => {
