@@ -38,6 +38,12 @@ export default function Home() {
     if(localStorage.getItem('previuslyWalletConnected') === "true") connect(), update();
   }, [])
   
+  useEffect(() => {
+    library?.eth.getBalance(account).then((result) => {
+      setBalance(result/1e18)
+    });
+  }, [library?.eth.getBalance(account)])
+  
 
 
   
