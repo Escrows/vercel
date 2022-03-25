@@ -1,6 +1,6 @@
 # Nextjs + Login Metamask 
 
-You can connect your own metamask wallet and see the balance and adress.
+You can connect your own metamask wallet and see the balance and address.
 
 ## How to use
 
