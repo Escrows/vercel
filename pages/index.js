@@ -6,7 +6,7 @@ import Head from "next/head";
 import Login from "../components/buttonLogin.component";
 import Address from "../components/address.component";
 import Balance from "../components/balance.component";
-
+import Button from "../components/button.component";
 export default function Home() {
   const { activate, active, deactivate, error, account, chainID, library } =
     useWeb3React();
@@ -68,18 +68,17 @@ export default function Home() {
               <div className="mt-2 block w-full text-center">
                 <Balance balance={balance} />
               </div>
-              <button
-                onClick={updateBalance}
+              <Button
+                text="UPDATE balance"
+                action={updateBalance}
                 className="inline-block mt-10 ml-1 w-[45%] border-b-4 border-red-700 rounded-lg bg-red-500 text-white font-semibold uppercase text-lg  py-2"
-              >
-                LOAD BALANCE
-              </button>
-              <button
-                onClick={disconnect}
+              />
+
+              <Button
+                text="LOG OUT"
+                action={disconnect}
                 className="mt-2 ml-9 w-[45%] border-b-4 border-red-700 rounded-lg bg-red-500 text-white font-semibold uppercase text-lg  py-2"
-              >
-                LOGOUT
-              </button>
+              />
             </div>
           )}
         </div>
