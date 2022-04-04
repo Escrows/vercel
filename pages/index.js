@@ -4,6 +4,9 @@ import { useCallback, useEffect, useState } from "react";
 
 import Head from "next/head";
 import Login from "../components/buttonLogin.component";
+import Address from "../components/address.component";
+import Balance from "../components/balance.component";
+
 export default function Home() {
   const { activate, active, deactivate, error, account, chainID, library } =
     useWeb3React();
@@ -59,15 +62,11 @@ export default function Home() {
                 rel="nofollow noopener noreferrer"
                 className="mt-2 block w-full text-center"
               >
-                <span className="inline-block  border-b-4 border-red-20 w-[85%] text-black font-semibold truncate px-4 py-2 bg-gray-200 rounded-lg border-gray-300">
-                  {account}
-                </span>
+                <Address account={account} />
               </a>
 
               <div className="mt-2 block w-full text-center">
-                <span className="truncate text-lg w-[45%] text-black font-semibold uppercase bg-green-400 border-green-700 rounded-lg p-2 border-b-4">
-                  {balance} ETH
-                </span>
+                <Balance balance={balance} />
               </div>
               <button
                 onClick={updateBalance}
