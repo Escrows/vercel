@@ -3,10 +3,12 @@ import { connector } from "../config/web3";
 import { useCallback, useEffect, useState } from "react";
 
 import Head from "next/head";
+import Header from "../components/header.component";
 import Login from "../components/buttonLogin.component";
 import Address from "../components/address.component";
 import Balance from "../components/balance.component";
 import Button from "../components/button.component";
+
 export default function Home() {
   const { activate, active, deactivate, error, account, chainID, library } =
     useWeb3React();
@@ -49,11 +51,9 @@ export default function Home() {
 
       <main className="flex justify-center items-center min-h-screen bg-blue-200">
         <div className="bg-white p-4 rounded-lg shadow-lg">
-          <h1 className="text-center p-2 text-3xl font-semibold uppercase text-black-600">
-            METAMASK WEB
-          </h1>
+          <Header />
           {!active || !account ? (
-            <Login connect={connect} />
+            <Button text="log in" action={connect} />
           ) : (
             <div>
               <a
@@ -68,17 +68,9 @@ export default function Home() {
               <div className="mt-2 block w-full text-center">
                 <Balance balance={balance} />
               </div>
-              <Button
-                text="UPDATE balance"
-                action={updateBalance}
-                className="inline-block mt-10 ml-1 w-[45%] border-b-4 border-red-700 rounded-lg bg-red-500 text-white font-semibold uppercase text-lg  py-2"
-              />
+              <Button text="update balance" action={updateBalance} />
 
-              <Button
-                text="LOG OUT"
-                action={disconnect}
-                className="mt-2 ml-9 w-[45%] border-b-4 border-red-700 rounded-lg bg-red-500 text-white font-semibold uppercase text-lg  py-2"
-              />
+              <Button text="log out" action={disconnect} />
             </div>
           )}
         </div>

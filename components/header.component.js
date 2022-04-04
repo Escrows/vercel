@@ -1,12 +1,9 @@
-
 const Header = () => {
-   return(
-      <dvi className="bg-blue-500">
-         <h1 className="ml-5 font-semibold text-2xl">View Wallet</h1>
-      
-      </dvi>
-   );
-
-}
+  return (
+    <h1 className="text-center p-2 text-3xl font-semibold uppercase text-black-600">
+      METAMASK WEB
+    </h1>
+  );
+};
 
 export default Header;
