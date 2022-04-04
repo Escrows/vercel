@@ -3,7 +3,6 @@ import { connector } from "../config/web3";
 import { useCallback, useEffect, useState } from "react";
 
 import Head from "next/head";
-import Header from "../components/header.component";
 
 export default function Home() {
   const { activate, active, deactivate, error, account, chainID, library } =
@@ -28,9 +27,8 @@ export default function Home() {
   };
 
   useEffect(() => {
-    if (localStorage.getItem("previuslyWalletConnected") === "true")
-      connect();
-  }, []);
+    if (localStorage.getItem("previuslyWalletConnected") === "true") connect();
+  }, [connect]);
 
   useEffect(() => {
     library?.eth.getBalance(account).then((result) => {
@@ -46,7 +44,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
       <main className="flex justify-center items-center min-h-screen bg-blue-200">
         <div className="bg-white p-4 rounded-lg shadow-lg">
           <h1 className="text-center p-2 text-3xl font-semibold uppercase text-black-600">
@@ -60,9 +57,6 @@ export default function Home() {
               >
                 SIGN-UP METAMASK
               </button>
-              <p className="text-bolder text-1xl ">
-                &copy; 2022 Nextjs+Metamask
-              </p>
             </div>
           ) : (
             <div>
