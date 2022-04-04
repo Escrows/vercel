@@ -4,7 +4,6 @@ import { useCallback, useEffect, useState } from "react";
 
 import Head from "next/head";
 import Header from "../components/header.component";
-import Login from "../components/buttonLogin.component";
 import Address from "../components/address.component";
 import Balance from "../components/balance.component";
 import Button from "../components/button.component";
