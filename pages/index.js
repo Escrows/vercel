@@ -3,7 +3,7 @@ import { connector } from "../config/web3";
 import { useCallback, useEffect, useState } from "react";
 
 import Head from "next/head";
-
+import Login from "../components/buttonLogin.component";
 export default function Home() {
   const { activate, active, deactivate, error, account, chainID, library } =
     useWeb3React();
@@ -50,14 +50,7 @@ export default function Home() {
             METAMASK WEB
           </h1>
           {!active || !account ? (
-            <div>
-              <button
-                onClick={connect}
-                className="block w-full p-4 border-b-4 border-red-700 rounded-lg bg-red-500 text-white font-semibold uppercase text-lg leafing-none px-4 py-2"
-              >
-                SIGN-UP METAMASK
-              </button>
-            </div>
+            <Login connect={connect} />
           ) : (
             <div>
               <a
