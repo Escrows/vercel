@@ -1,10 +1,12 @@
 # Nextjs + Login Metamask 
 
-You can connect your own metamask wallet and see the balance and address.
+This is a easy project to use metamask in your own web.
+
+You can see your balance and adress in frontend.
 
 ## How to use
 
-First, run the development server:
+First install the npm dependences and second start the project
 
 ```bash
 npm install
