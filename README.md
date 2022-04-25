@@ -2,7 +2,7 @@
 
 This is a easy project to use metamask in your own web.
 
-You can see your balance and adress in frontend.
+You can see your balance and adress in the client.
 
 ## How to use
 
