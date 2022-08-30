@@ -54,13 +54,14 @@ export default function Home() {
             <Button text="log in" action={connect} />
           ) : (
             <div>
-              <a
+              <p
+                className="bold white"
                 href={`https://etherscan.io/address/${account}`}
                 target="_blank"
                 rel="nofollow noopener noreferrer"
               >
                 <Address account={account} />
-              </a>
+              </p>
 
                 <Balance balance={balance} />
               <Button text="update balance" action={updateBalance} />
