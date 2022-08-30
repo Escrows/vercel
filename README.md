@@ -17,6 +17,6 @@ npm run dev
 Vercel
 
 ## Notes
-I use tailwind you can change.
+I use my own framework https://koicss.com
 
 
