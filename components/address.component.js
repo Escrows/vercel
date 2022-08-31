@@ -1,8 +1,8 @@
 const Address = ({account}) => {
   return (
-    <span >
+    <p >
       {account}
-    </span>
+    </p>
   );
 };
 

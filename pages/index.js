@@ -58,14 +58,14 @@ export default function Home() {
 
           ) : (
             <div>
-              <p
-                className="bold white"
+              <a
+                className="bold"
                 href={`https://etherscan.io/address/${account}`}
                 target="_blank"
                 rel="nofollow noopener noreferrer"
               >
                 <Address account={account} />
-              </p>
+              </a>
 
                 <Balance balance={balance} />
 
