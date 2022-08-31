@@ -7,6 +7,7 @@ import Header from "../components/header.component";
 import Address from "../components/address.component";
 import Balance from "../components/balance.component";
 import Button from "../components/button.component";
+import Wallet from "../layouts/wallets";
 
 export default function Home() {
   const { activate, active, deactivate, error, account, chainID, library } =
@@ -49,9 +50,13 @@ export default function Home() {
       </Head>
 
       <main className="center">
-          <Header />
+      <Header />
           {!active || !account ? (
-            <Button text="log in" action={connect} />
+            <div>
+              <Button className="web3-button" text="Connect a Wallet" action={connect} />
+            <Wallet />
+            </div>
+
           ) : (
             <div>
               <p
@@ -64,11 +69,11 @@ export default function Home() {
               </p>
 
                 <Balance balance={balance} />
-              <Button text="update balance" action={updateBalance} />
 
               <Button text="log out" action={disconnect} />
             </div>
           )}
+
       </main>
     </div>
   );

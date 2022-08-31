@@ -1,3 +1,17 @@
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.image {
+    width: 1200px;
+}
+
+.web3-button {
+    border-radius: none!important;
+    background-color: red!important;
+}
+
+.header {
+    font-size: 100px;
+    color: rebeccapurple;
 }
