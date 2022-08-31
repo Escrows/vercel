@@ -13,5 +13,8 @@ body {
 
 .header {
     font-size: 100px;
-    color: rebeccapurple;
+	background: linear-gradient(to right, #b530d0 0%, #330867 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
 }
