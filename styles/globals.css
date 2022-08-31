@@ -1,5 +1,5 @@
-body {
-    font-family: Arial, Helvetica, sans-serif
+* {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .image {
@@ -17,7 +17,20 @@ body {
     background-color: red!important;
 }
 
+@media (max-width: 700px) { 
+    .image {
+        width: 300px;
+    }
+
+    .header {
+        margin-top: 50%;
+        font-size: 50px!important;
+    }
+ }
+
+
 .header {
+    text-align: center;
     font-size: 100px;
 	background: linear-gradient(to right, #b530d0 0%, #330867 100%);
 	-webkit-background-clip: text;
