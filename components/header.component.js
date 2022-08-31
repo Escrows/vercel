@@ -1,7 +1,7 @@
 const Header = () => {
   return (
     <h1 className="header">
-       The Internet of Blockchain
+       The Internet of Blockchain.
     </h1>
   );
 };

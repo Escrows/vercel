@@ -53,8 +53,7 @@ export default function Home() {
       <Header />
           {!active || !account ? (
             <div>
-              <Button className="web3-button" text="Connect a Wallet" action={connect} />
-            <Wallet />
+            <Wallet action={connect}/>
             </div>
 
           ) : (

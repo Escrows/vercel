@@ -6,6 +6,12 @@ body {
     width: 1200px;
 }
 
+.image:hover {
+    filter: drop-shadow(10px 10px 4px #330867);
+
+    cursor: pointer;
+}
+
 .web3-button {
     border-radius: none!important;
     background-color: red!important;

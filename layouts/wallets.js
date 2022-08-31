@@ -1,7 +1,7 @@
-const Wallet = () => {
+const Wallet = ({action}) => {
     return(
         <div className="center">
-            <img className="image" src="./WEB3.svg" />
+            <img onClick={action} className="image" src="./WEB3.svg" />
         </div>
     )
 }
