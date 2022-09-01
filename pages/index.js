@@ -8,14 +8,20 @@ import Address from "../components/address.component";
 import Balance from "../components/balance.component";
 import Button from "../components/button.component";
 import Wallet from "../layouts/wallets";
+import Modal from "../components/modal.component"
+import Link from 'next/link'
+import { useRouter } from "next/dist/client/router";
 
 export default function Home() {
   const { activate, active, deactivate, error, account, chainID, library } =
     useWeb3React();
 
   const [balance, setBalance] = useState(0);
-
+  const router = useRouter()
   const connect = useCallback(() => {
+    if(error?.message == "No Ethereum provider was found on window.ethereum.") {
+      router.push('/nowallet');
+    }
     activate(connector);
     localStorage.setItem("previuslyWalletConnected", true);
   });
@@ -44,9 +50,11 @@ export default function Home() {
       </Head>
 
       <main className="center">
-      <Header />
+
+      <Header children="The Internet of Blockchain." />
           {!active || !account ? (
             <div>
+
             <Wallet action={connect}/>
             </div>
 

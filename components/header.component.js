@@ -1,7 +1,7 @@
-const Header = () => {
+const Header = ({children}) => {
   return (
     <h1 className="header">
-       The Internet of Blockchain.
+       {children}
     </h1>
   );
 };

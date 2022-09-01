@@ -6,6 +6,11 @@
     width: 1200px;
 }
 
+
+.image-wallet {
+    width: 400px!important;
+}
+
 .image:hover {
     filter: drop-shadow(10px 10px 4px #330867);
 
