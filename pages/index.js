@@ -11,7 +11,7 @@ import Address from "../components/address.component";
 import Balance from "../components/balance.component";
 import Button from "../components/button.component";
 import Wallet from "../layouts/wallets";
-
+import Welcome from "../layouts/welcome";
 
 export default function Home() {
   const { activate, active, deactivate, error, account, chainID, library } = useWeb3React();
@@ -56,16 +56,7 @@ export default function Home() {
             </div>
           ) : (
             <div>
-              <a
-                className="bold"
-                href={`https://etherscan.io/address/${account}`}
-                target="_blank"
-                rel="nofollow noopener noreferrer"
-              >
-                <Address account={account} />
-              </a>
-                <Balance balance={balance} />
-              <Button text="log out" action={disconnect} />
+              <Welcome account={account} balance={balance} disconnect={disconnect} />
             </div>
           )}
       </main>
