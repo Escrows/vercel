@@ -7,9 +7,6 @@ import '../node_modules/koicss/css/styles.min.css'
 
 import Head from "next/head";
 import Header from "../components/header.component";
-import Address from "../components/address.component";
-import Balance from "../components/balance.component";
-import Button from "../components/button.component";
 import Wallet from "../layouts/wallets";
 import Welcome from "../layouts/welcome";
 
