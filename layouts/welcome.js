@@ -1,6 +1,5 @@
 import Address from "../components/address.component";
-import Balance from "../components/balance.component";
-import Button from "../components/button.component";
+import Chat from "../components/chat.component";
 
 const Welcome = ({account, balance, disconnect}) => {
     return(
@@ -13,8 +12,9 @@ const Welcome = ({account, balance, disconnect}) => {
               >
                 <Address account={account} />
               </a>
-                <Balance balance={balance} />
-              <Button text="log out" action={disconnect} />
+                {/* <Balance balance={balance} />
+              <Button text="log out" action={disconnect} /> */}
+              <Chat nombre={account}/>
         </div>
     )
 }
