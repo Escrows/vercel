@@ -4,6 +4,7 @@ import Chat from "../components/chat.component";
 const Welcome = ({account, balance, disconnect}) => {
     return(
         <div>
+          <h2>Bienvenido</h2>
              <a
                 className="bold"
                 href={`https://etherscan.io/address/${account}`}

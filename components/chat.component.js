@@ -36,23 +36,32 @@ const Chat = ({ nombre }) => {
       <div className="chat">
         {mensajes.map((e, i) => (
           <div key={i}>
-            <div>{e.nombre}</div>
+                    <div className="message">
+                    <a
+                className="bold"
+                href={`https://etherscan.io/address/${nombre}`}
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+              >
+            <div className="name">{e.nombre}</div>
+            </a>
             <div>{e.mensaje}</div>
+            </div>
+
           </div>
         ))}
         <div ref={divRef}></div>
       </div>
       <form onSubmit={submit}>
-        <label htmlFor="">Escriba su mensaje</label>
-        <textarea
+        <input
           name=""
           id=""
+          placeholder="Type your message here!"
           cols="30"
           rows="10"
           value={mensaje}
           onChange={(e) => setMensaje(e.target.value)}
-        ></textarea>
-        <button>Enviar</button>
+        ></input>
       </form>
     </div>
   );
