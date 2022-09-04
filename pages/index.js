@@ -16,7 +16,7 @@ export default function Home() {
   const router = useRouter();
 
   const connect = useCallback(() => {
-    if(error?.message == "No Ethereum provider was found on window.ethereum.") {
+    if (error?.message == "No Ethereum provider was found on window.ethereum.") {
       router.push('/nowallet');
     }
     activate(connector);
@@ -46,16 +46,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="center">
-      <Header children="The Internet of Blockchain." />
-          {!active || !account ? (
-            <div>
-            <Wallet action={connect}/>
-            </div>
-          ) : (
-            <div>
-              <Welcome account={account} balance={balance} disconnect={disconnect} />
-            </div>
-          )}
+        <Header children="The Internet of Blockchain." />
+        {!active || !account ? (
+          <div>
+            <Wallet action={connect} />
+          </div>
+        ) : (
+          <div>
+            <Welcome account={account} balance={balance} disconnect={disconnect} />
+          </div>
+        )}
       </main>
     </div>
   );
