@@ -1,5 +1,5 @@
 import io from "socket.io-client";
 
-let socket = io("web3.jorgejuarez.es:5000");
+let socket = io("localhost:5000");
 
 export default socket;
