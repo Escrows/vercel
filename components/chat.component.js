@@ -52,6 +52,7 @@ const Chat = ({ nombre }) => {
                 ))}
                 <div ref={divRef}></div>
             </div>
+            <div className="chat-input">
             <form onSubmit={submit}>
                 <input
                     name=""
@@ -63,6 +64,7 @@ const Chat = ({ nombre }) => {
                     onChange={(e) => setMensaje(e.target.value)}
                 ></input>
             </form>
+            </div>
         </div>
     );
 };
