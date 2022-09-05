@@ -14,12 +14,12 @@
     overflow: auto;
 
 }
-.name {
+.address {
     font-weight: 200;
-    font-size: 18px;
+    font-size: 12px;
     color: rgb(255, 255, 255);
     white-space: nowrap;
-    width: 300px;
+    width: 60px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -40,6 +40,8 @@ input {
 				color: white;
 }
 
+
+
 .message {
     display: flex;
     flex-direction: column;
@@ -47,18 +49,18 @@ input {
     align-items: center;
     width: 67px;
     padding-right: 5px;
-
+    font-size: 18px;
     padding: 1rem;
     border-radius: 5px;
     background-color: #666666;
-    color: white;
+    color: rgb(0, 0, 0);
     box-shadow: 
 	inset 0 2rem 2rem -2rem rgba(black, 0.05),
 	inset 0 -2rem 2rem -2rem rgba(black, 0.05);
     box-sizing: border-box;
 	padding: 0.5rem 1rem;
 	margin: 1rem;
-	background: linear-gradient(to right, #b530d0 0%, #6d2cbd 100%);
+	background: linear-gradient(to right, #ffffff 0%, #ffffff 100%);
 	border-radius: 1.125rem 1.125rem 0 1.125rem;
 	min-height: 2.25rem;
 	width: fit-content;
@@ -72,13 +74,14 @@ input {
 	overflow-y: auto;
     background-color: #666666;
     color: white;
+    font-size: 18px;
     box-shadow: 
 			inset 0 2rem 2rem -2rem rgba(black, 0.05),
 			inset 0 -2rem 2rem -2rem rgba(black, 0.05);
             box-sizing: border-box;
 			padding: 0.5rem 1rem;
 			margin: 1rem;
-			background: linear-gradient(to right, #3095d0 0%, #6d2cbd 100%);
+			background: linear-gradient(to right, #181818 0%, #181818 100%);
 			border-radius: 1.125rem 1.125rem 1.125rem 0;
 			min-height: 2.25rem;
 			width: fit-content;
@@ -108,7 +111,6 @@ input {
     }
 
     .header {
-        margin-top: 50%;
         font-size: 50px!important;
     }
  }

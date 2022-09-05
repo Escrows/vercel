@@ -37,15 +37,15 @@ const Chat = ({ nombre }) => {
                 {mensajes.map((e, i) => (
                     <div key={i}>
                         <div className={e.nombre === nombre ? "message parker" : "message2"}>
+                            <div>{e.mensaje}</div>
                             <a
                                 className="bold"
                                 href={`https://etherscan.io/address/${nombre}`}
                                 target="_blank"
                                 rel="nofollow noopener noreferrer"
                             >
-                                <div className="name">{e.nombre}</div>
+                                <div className="address">{e.nombre}</div>
                             </a>
-                            <div>{e.mensaje}</div>
                         </div>
 
                     </div>
