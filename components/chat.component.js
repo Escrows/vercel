@@ -63,6 +63,7 @@ const Chat = ({ nombre }) => {
                     value={mensaje}
                     onChange={(e) => setMensaje(e.target.value)}
                 ></input>
+                <button className="send">SEND</button>
             </form>
             </div>
         </div>

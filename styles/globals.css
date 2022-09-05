@@ -15,6 +15,10 @@
 
 }
 
+.send {
+    border-radius: 10%!important;
+}
+
 .chat-input {
     padding: 10px;
     background-color: #f8f8f8;
