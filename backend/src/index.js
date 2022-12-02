@@ -11,7 +11,6 @@ const io = socketio(servidor,{
       }
 })
 
-
 io.on("connection", (socket) => {
   let nombre;
 
